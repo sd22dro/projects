@@ -1,0 +1,45 @@
+name: AI Resume Analyzer
+
+# Trigger the workflow on push or pull request to the main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the latest code from the repository
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Install required dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install spacy pandas scikit-learn PyPDF2 docx2txt
+        python -m spacy download en_core_web_sm
+
+    # Run the Resume Analyzer script
+    - name: Run Resume Analyzer
+      run: |
+        python resume_analyzer.py
+
+    # Upload any output from the analysis (if applicable)
+    - name: Upload results
+      if: success()
+      uses: actions/upload-artifact@v2
+      with:
+        name: analysis-results
+        path: result.json  # Change the path according to your result output
