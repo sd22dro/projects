@@ -1,0 +1,61 @@
+{
+  "name": "recipe-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A sophisticated Recipe App with a 5-star hotel-like design.",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint \"./src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"./src/**/*.{js,jsx}\" --fix"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "framer-motion": "^10.18.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.28.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^2.8.8"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "react",
+    "recipe",
+    "app",
+    "material-ui",
+    "framer-motion",
+    "eslint",
+    "prettier"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
